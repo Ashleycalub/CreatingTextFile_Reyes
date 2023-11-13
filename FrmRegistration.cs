@@ -20,29 +20,30 @@ namespace CreatingTextFile_Reyes
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string getStudentNo = txtStudNo.Text;
-            string getLastName = txtLastName.Text;
-            string getMiddleName = txtMI.Text;
-            string getFirstName = txtFirstName.Text;
-            string getAge = txtAge.Text;
-            string getBirthday = dateTimePickerBday.Text;
-            string getList = cbProgram.Text;
-            string getGender = cbGender.Text;
-            string getContactNo = txtContactNo.Text;
-            string setFileName = String.Concat(getStudentNo, ".txt");
+            string Age = txtAge.Text;
+            string Bday = dateTimePickerBday.Text;
+            string Program = cbProgram.Text;
+            string Firstname = txtFirstName.Text;
+            string Middlename = txtMI.Text;
+            string Studno = txtStudNo.Text;
+            string Lastname = txtLastName.Text;
+            string Gender = cbGender.Text;
+            string Contactno = txtContactNo.Text;
+            string FileName = String.Concat(Studno, ".txt");
+            
 
+            string[] info = { "StudentNo.:" + Studno, "FullName:" + Firstname + " " + Middlename + " " + Lastname,
+            "Program:" + Program + "\nAge:" + Age, "Birthday:" + Bday, "ContactNo.:" + Contactno, "Gender: " + Gender };
+            
             string docPath2 = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            StreamWriter outputFile = new StreamWriter(Path.Combine(docPath2, setFileName));
+            StreamWriter outputFile = new StreamWriter(Path.Combine(docPath2, FileName));
 
-            string[] info = { "StudentNo.:" + getStudentNo, "FullName:" + getFirstName + " " + getMiddleName
-                   + " " + getLastName, "Program:" + getList + "Age:" + getAge, "Birthday:" + 
-                    getBirthday, "ContactNo.:" + getContactNo, "Gender: " + getGender, };
-
-            Console.WriteLine(getStudentNo);
+            Console.WriteLine(Studno);
             foreach (string i in info)
             {
                 outputFile.WriteLine(i);
             }
+
             outputFile.Close();
             MessageBox.Show("Successfully saved!!!");
             Close();

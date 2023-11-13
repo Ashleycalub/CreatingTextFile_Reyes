@@ -23,14 +23,15 @@ namespace CreatingTextFile_Reyes
             //Declare an instance FrmFileName and call ShowDialog method.
             FrmFileName fileName = new FrmFileName();
             fileName.ShowDialog();
-            
-            string getInput = txtInput.Text; //Declare string variable getInput and get value txtInput.
+
+            string getInput = txtInput.Text;
+
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, fileName.SetFileName)))
+
+            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, FrmFileName.SetFileName)))
             {
                 outputFile.WriteLine(getInput);
                 Console.WriteLine(getInput);
-
             }
         }
     }

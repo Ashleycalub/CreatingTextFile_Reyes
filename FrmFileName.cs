@@ -16,7 +16,7 @@ namespace CreatingTextFile_Reyes
         {
             InitializeComponent();
         }
-        public string SetFileName { get; private set; }
+        public static string SetFileName;
         private void btnOkay_Click(object sender, EventArgs e)
         {
             //set a value of static Setfilename by calling the value txtfile.
