@@ -48,6 +48,7 @@
             this.cbProgram = new System.Windows.Forms.ComboBox();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnRecords = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -229,7 +230,7 @@
             this.button1.BackColor = System.Drawing.Color.IndianRed;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 15.75F);
-            this.button1.Location = new System.Drawing.Point(289, 262);
+            this.button1.Location = new System.Drawing.Point(204, 262);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 33);
             this.button1.TabIndex = 19;
@@ -237,12 +238,26 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnRecords
+            // 
+            this.btnRecords.BackColor = System.Drawing.Color.IndianRed;
+            this.btnRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecords.Font = new System.Drawing.Font("Times New Roman", 15.75F);
+            this.btnRecords.Location = new System.Drawing.Point(374, 262);
+            this.btnRecords.Name = "btnRecords";
+            this.btnRecords.Size = new System.Drawing.Size(130, 33);
+            this.btnRecords.TabIndex = 41;
+            this.btnRecords.Text = "Records";
+            this.btnRecords.UseVisualStyleBackColor = false;
+            this.btnRecords.Click += new System.EventHandler(this.btnRecords_Click);
+            // 
             // FrmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(709, 307);
+            this.Controls.Add(this.btnRecords);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cbGender);
             this.Controls.Add(this.cbProgram);
@@ -293,5 +308,6 @@
         private System.Windows.Forms.ComboBox cbProgram;
         private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRecords;
     }
 }

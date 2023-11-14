@@ -32,8 +32,8 @@ namespace CreatingTextFile_Reyes
             string FileName = String.Concat(Studno, ".txt");
             
 
-            string[] info = { "StudentNo.:" + Studno, "FullName:" + Firstname + " " + Middlename + " " + Lastname,
-            "Program:" + Program + "\nAge:" + Age, "Birthday:" + Bday, "ContactNo.:" + Contactno, "Gender: " + Gender };
+            string[] info = { "Student no.: " + Studno, "FullName: " + Firstname + " " + Middlename + ". " + Lastname,
+            "Program: " + Program + "\nAge: " + Age, "Birthday: " + Bday, "Contact no.: " + Contactno, "Gender: " + Gender };
             
             string docPath2 = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             StreamWriter outputFile = new StreamWriter(Path.Combine(docPath2, FileName));
@@ -74,6 +74,16 @@ namespace CreatingTextFile_Reyes
             {
                 cbGender.Items.Add(ListOfGender[i].ToString());
             }
+        }
+
+        private void btnRecords_Click(object sender, EventArgs e)
+        {
+            FrmStudentRecord frmStudent = new FrmStudentRecord();
+            frmStudent.ShowDialog();
+
+            FrmRegistration frmRegistration = new FrmRegistration();
+
+            frmRegistration.Close();
         }
     }
 }
